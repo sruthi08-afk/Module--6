@@ -25,15 +25,42 @@ To write a Python program to create a class `Student` with the private members `
 
 ### PROGRAM
 
-```
+```python
+class Student:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = None
+        self.set_age(age)  # Use setter to initialize
 
+    # Getter for age
+    def get_age(self):
+        return self.__age
+
+    # Setter for age
+    def set_age(self, age):
+        if age > 0:
+            self.__age = age
+        else:
+            print("Invalid age")
+
+    # Method to display student details
+    def show(self):
+        print(f"Name: {self.__name} {self.__age}")
+
+# Example usage
+s = Student("Jessa", 14)
+s.show()
+
+s.set_age(16)
+s.show()
 
 
 ```
 
 ### OUTPUT
+<img width="559" height="171" alt="image" src="https://github.com/user-attachments/assets/084bb9f4-84dd-4496-b22d-a1f86ed1f36d" />
+
 
 
 ### RESULT
-
-
+Thus the python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable has been implemented and executed successfully.
